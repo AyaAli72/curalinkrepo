@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { searchSeries, fetchWebApps } from '../services/dcmchee';
+import API_URL from "../api";
 
+fetch(`${API_URL}/your-endpoint`)
+  .then(res => res.json())
+  .then(data => console.log(data));
 export default function SeriesSearch() {
   const [formData, setFormData] = useState({
     patientFamilyName: '',

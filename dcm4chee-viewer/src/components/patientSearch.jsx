@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { searchPatients, fetchWebApps } from '../services/dcmchee';
+import API_URL from "../api";
 
+fetch(`${API_URL}/your-endpoint`)
+  .then(res => res.json())
+  .then(data => console.log(data));
 export default function PatientSearch() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({

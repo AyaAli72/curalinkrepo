@@ -7,7 +7,11 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { fetchHospital, fetchHospitalDashboard } from '../services/dcmchee';
+import API_URL from "../api";
 
+fetch(`${API_URL}/your-endpoint`)
+  .then(res => res.json())
+  .then(data => console.log(data));
 // ─── Colour palette (teal brand) ─────────────────────────────────────────────
 const PALETTE = ['#31B6C5', '#1E7586', '#2F545B', '#0a6e79', '#4DD9E8', '#14A3B8'];
 

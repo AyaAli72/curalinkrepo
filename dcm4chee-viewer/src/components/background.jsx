@@ -1,4 +1,9 @@
 import { useLocation } from "react-router-dom";
+import API_URL from "../api";
+
+fetch(`${API_URL}/your-endpoint`)
+  .then(res => res.json())
+  .then(data => console.log(data));
 
 export default function Background() {
   const location = useLocation();

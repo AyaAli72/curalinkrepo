@@ -1,5 +1,10 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { smartSearch } from '../services/dcmchee';
+import API_URL from "../api";
+
+fetch(`${API_URL}/your-endpoint`)
+  .then(res => res.json())
+  .then(data => console.log(data));
 
 const TypingDots = () => (
   <span className="inline-flex gap-1 items-center">

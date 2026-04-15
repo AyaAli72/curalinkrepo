@@ -1,7 +1,11 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState, useCallback } from "react";
 import { hasPermission } from "../config/permissions";
+import API_URL from "../api";
 
+fetch(`${API_URL}/your-endpoint`)
+  .then(res => res.json())
+  .then(data => console.log(data));
 const getNavItems = () => {
   const isAdmin = localStorage.getItem('isAdmin') === 'true';
 
